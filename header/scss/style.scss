@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+header{
+    font-weight: bold;
+    // background-color: #0267f4;
+    background: linear-gradient(70deg, #0267f4 0%, #0267f4 52%, rgb(65, 129, 247) 52%, rgb(65, 129, 247) 81%, #0267f4 70%);
+    height: 100vh;
+    nav{
+        padding: 1%;
+        display: flex;
+        justify-content: space-around;
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        .menu{
+            width: 40vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        button{
+            font-weight: bolder;
+            width: 106px;
+            height: 46px;
+            border-radius: 5px;
+            background-color: white;
+            color: #0267f4;
+            border: none;
+        }
+    }
+    #container{
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        width: 100%;
+
+        #leftArrow{
+            width: 15%;
+        }
+
+        #rightArrow{
+            width: 10%;
+        }
+
+        .Arrow{
+            display: flex;
+            flex-direction: column ;
+            align-items: center;
+            justify-content: center;
+            font-size: xx-large;
+            margin-bottom: 10vh;
+        }
+
+        #content{
+            display: flex;
+            justify-content: space-between;
+            #rocket{
+                width: 43vw;
+            }
+        }
+
+        #text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h1{
+                font-size: 105px;
+            }
+
+            
+            p{
+                margin: 4vh 0 4vh 0;
+            }
+
+            #buttons{
+                display: flex;
+                
+                #button1{
+                    font-weight: bolder;
+                    border-radius: 25px;
+                    background-color: white;
+                    color: #0267f4;
+                    border: none;
+                    padding: 15px 25px;
+                    margin-right: 1%;
+                }
+                #button2{
+                    box-sizing: border-box;
+                    font-weight: bolder;
+                    border-radius: 25px;
+                    background-color:#0267f4;
+                    color: white;
+                    border: white solid 3px;
+                    padding: 15px 25px;
+                    margin-left: 1%;
+                }
+            }
+        }
+    }
+
+}
