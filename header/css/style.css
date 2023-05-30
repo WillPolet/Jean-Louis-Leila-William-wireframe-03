@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  font-weight: bold;
+  background: linear-gradient(70deg, #0267f4 0%, #0267f4 52%, rgb(65, 129, 247) 52%, rgb(65, 129, 247) 81%, #0267f4 70%);
+  height: 100vh;
+}
+header nav {
+  padding: 1%;
+  display: flex;
+  justify-content: space-around;
+}
+header nav a {
+  color: white;
+  text-decoration: none;
+}
+header nav .menu {
+  width: 40vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav button {
+  font-weight: bolder;
+  width: 106px;
+  height: 46px;
+  border-radius: 5px;
+  background-color: white;
+  color: #0267f4;
+  border: none;
+}
+header #container {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  width: 100%;
+}
+header #container #leftArrow {
+  width: 15%;
+}
+header #container #rightArrow {
+  width: 10%;
+}
+header #container .Arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: xx-large;
+  margin-bottom: 10vh;
+}
+header #container #content {
+  display: flex;
+  justify-content: space-between;
+}
+header #container #content #rocket {
+  width: 43vw;
+}
+header #container #text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header #container #text h1 {
+  font-size: 105px;
+}
+header #container #text p {
+  margin: 4vh 0 4vh 0;
+}
+header #container #text #buttons {
+  display: flex;
+}
+header #container #text #buttons #button1 {
+  font-weight: bolder;
+  border-radius: 25px;
+  background-color: white;
+  color: #0267f4;
+  border: none;
+  padding: 15px 25px;
+  margin-right: 1%;
+}
+header #container #text #buttons #button2 {
+  box-sizing: border-box;
+  font-weight: bolder;
+  border-radius: 25px;
+  background-color: #0267f4;
+  color: white;
+  border: white solid 3px;
+  padding: 15px 25px;
+  margin-left: 1%;
+}
+
+/*# sourceMappingURL=style.css.map */
