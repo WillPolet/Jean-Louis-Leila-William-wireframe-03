@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@100&family=Roboto:wght@100;300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.pricing-plans {
+    background: #D3D3D3;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.pricing-plans h2 {
+    margin-top: 50px;
+}
+
+.pricing-plans .intro {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.plans {
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
+}
+
+.plan {
+    background: linear-gradient(179deg, rgb(107, 232, 231) 0%, rgb(0, 173, 229) 40%, rgb(0, 127, 238) 80%, rgb(0, 104, 241) 100%);
+    padding: 8px 20px;
+    border-radius: 10px;
+    height: 300px;
+    width: 200px;
+    margin: 20px;
+    color: #fff;
+}
+
+.plan img {
+    margin-left: 50px;
+}
+
+.content {
+    margin-top: 10px;
+}
+.subscription{
+    font-weight: bold;
+}
+.subscription,
+.price {
+    text-align: center;
+}
+.price {
+    margin-top: 10px;
+}
+.description {
+    padding-top: 10px;
+    margin-top: 5px;
+}
+.price strong {
+    font-size: x-large;
+}
+
+.plan img {
+    width: 100px;
+}
+
+.plan a {
+    display: inline-block;
+    text-decoration: double;
+    font-weight: bolder;
+    font-size: 10px;
+    line-height: 1.5;
+    padding: 8px 20px;
+    border-radius: 20px;
+    background: #fff;
+    color: #007FFF;
+    margin: 20px 40px 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
