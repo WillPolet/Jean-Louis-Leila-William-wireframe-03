@@ -1,0 +1,81 @@
+@media screen and (max-width :600px) {
+
+    header{
+        nav{
+            display: block;
+            .menu{
+                display: none;
+            }
+    
+            button{
+                display: none;
+            }
+        }
+
+
+        #container{ 
+            #leftArrow{
+                    display: none;
+            }
+    
+            #rightArrow{
+                    display: none;
+            }
+    
+            #content{
+                display: flex;
+                justify-content: space-between;
+                #rocket{
+                    width: 43vw;
+                    @media screen and (max-width :600px) {
+                        display: none;
+                    }
+                }
+            }
+    
+            #text{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-top: 15vh;
+    
+                h1{
+                    font-size: 340%;
+                    margin: 2%;
+                    text-align: center;
+                }
+    
+                
+                p{
+                    margin: 4vh;
+                }
+    
+                #buttons{
+                    display: flex;
+                    margin: auto;
+                    
+                    #button1{
+                        font-weight: bolder;
+                        border-radius: 25px;
+                        background-color: white;
+                        color: #0267f4;
+                        border: none;
+                        padding: 15px 25px;
+                        margin: 2%;
+                    }
+                    #button2{
+                        box-sizing: border-box;
+                        font-weight: bolder;
+                        border-radius: 25px;
+                        background-color:#0267f4;
+                        color: white;
+                        border: white solid 3px;
+                        padding: 15px 25px;
+                        margin: 2%;
+                    }
+                }
+            }
+        }
+    
+    }
+}

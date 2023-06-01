@@ -1,3 +1,132 @@
+#MenuBurger {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  #MenuBurger {
+    z-index: 100;
+    position: relative;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .toggler {
+    /* ALWAYS KEEPING THE TOGGLER OR THE CHECKBOX ON TOP OF EVERYTHING :  */
+    z-index: 20;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    opacity: 0;
+  }
+  .hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    padding: 0.6rem;
+    z-index: 19;
+    /* FOR DISPLAYING EVERY ELEMENT IN THE CENTER : */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* CREATING THE MIDDLE LINE OF THE HAMBURGER : */
+  .hamburger > div {
+    position: relative;
+    top: 0;
+    left: 0;
+    background: darkblue;
+    height: 2px;
+    width: 60%;
+    transition: all 0.4s ease;
+  }
+  /* CREATING THE TOP AND BOTTOM LINES : 
+  TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
+  .hamburger > div::before,
+  .hamburger > div::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    background: darkblue;
+    width: 100%;
+    height: 2px;
+    transition: all 0.4s ease;
+  }
+  .hamburger > div::after {
+    top: 10px;
+  }
+  /* IF THE TOGGLER IS IN ITS CHECKED STATE, THEN SETTING THE BACKGROUND OF THE MIDDLE LAYER TO COMPLETE BLACK AND OPAQUE :  */
+  .toggler:checked + .hamburger > div {
+    background: rgba(0, 0, 0, 0);
+  }
+  .toggler:checked + .hamburger > div::before {
+    top: 0;
+    transform: rotate(-45deg);
+    background: darkblue;
+  }
+  /* AND ROTATING THE TOP AND BOTTOM LINES :  */
+  .toggler:checked + .hamburger > div::after {
+    top: 0;
+    transform: rotate(-135deg);
+    background: darkblue;
+  }
+  /* MAIN MENU WITH THE WHITE BACKGROUND AND THE TEXT :  */
+  .menuhamburger {
+    background: linear-gradient(90deg, rgba(77, 77, 242, 0.629) 0%, rgb(0, 90, 255) 50%, rgb(68, 74, 193) 95%, rgb(2, 0, 36) 100%);
+    width: 0%;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: -80px;
+    /* APPLYING TRANSITION TO THE MENU :  */
+    transition: all 0.8s ease;
+  }
+  .overflow {
+    overflow: hidden;
+  }
+  /* IF THE TOGGLER IS CHECKED, THEN INCREASE THE WIDTH OF THE MENU TO 30% , CREATING A SMOOTH EFFECT :  */
+  .toggler:checked ~ .menuhamburger {
+    width: 60%;
+  }
+  /* STYLING THE LIST :  */
+  .menuhamburger > div > ul {
+    display: flex;
+    flex-direction: column;
+    /* position: fixed; */
+    top: 70px;
+    /* HIDDEN INITIALLY  :  */
+    visibility: hidden;
+  }
+  .menuhamburger > div > ul > li {
+    list-style: none;
+    padding: 0.5rem;
+    padding-left: 10px;
+  }
+  .menuhamburger > div > ul > li > a {
+    color: black;
+    text-decoration: none;
+    font-size: 2rem;
+  }
+  /* WHEN THE TOGGLER IS CHECKED, CHANGE THE VISIBILITY TO VISIBLE :  */
+  .toggler:checked ~ .menuhamburger > div > ul {
+    transition: visibility 0.4s ease;
+    transition-delay: 0.1s;
+    visibility: visible;
+  }
+  /* WHEN THE TOGGLE IS UNCHECKED, CONTENT OF THE MENU STAY IN MENU FOR THE TRANSITION TIME */
+  .toggler ~ .menuhamburger > div > ul {
+    transition: visibility 0.4s ease;
+    transition-delay: 0.1s;
+    visibility: hidden;
+  }
+  .toggler:checked ~ .menuhamburger > div > ul > li > a:hover {
+    color: white;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -114,6 +243,75 @@ header #container #text #buttons #button2 {
   border: white solid 3px;
   padding: 15px 25px;
   margin-left: 1%;
+}
+
+@media screen and (max-width: 600px) {
+  header nav {
+    display: block;
+  }
+  header nav .menu {
+    display: none;
+  }
+  header nav button {
+    display: none;
+  }
+  header #container #leftArrow {
+    display: none;
+  }
+  header #container #rightArrow {
+    display: none;
+  }
+  header #container #content {
+    display: flex;
+    justify-content: space-between;
+  }
+  header #container #content #rocket {
+    width: 43vw;
+  }
+}
+@media screen and (max-width: 600px) and (max-width: 600px) {
+  header #container #content #rocket {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  header #container #text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15vh;
+  }
+  header #container #text h1 {
+    font-size: 340%;
+    margin: 2%;
+    text-align: center;
+  }
+  header #container #text p {
+    margin: 4vh;
+  }
+  header #container #text #buttons {
+    display: flex;
+    margin: auto;
+  }
+  header #container #text #buttons #button1 {
+    font-weight: bolder;
+    border-radius: 25px;
+    background-color: white;
+    color: #0267f4;
+    border: none;
+    padding: 15px 25px;
+    margin: 2%;
+  }
+  header #container #text #buttons #button2 {
+    box-sizing: border-box;
+    font-weight: bolder;
+    border-radius: 25px;
+    background-color: #0267f4;
+    color: white;
+    border: white solid 3px;
+    padding: 15px 25px;
+    margin: 2%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
