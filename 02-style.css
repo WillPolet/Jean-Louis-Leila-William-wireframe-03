@@ -15,11 +15,16 @@
     margin-top: 50px;
 }
 
-.pricing-plans .intro {
+.pricing-plans .pricing-plans-desktop {
     margin-top: 10px;
     text-align: center;
+    font-size: larger;
+    color: gray;
 }
 
+.pricing-plans .pricing-plans-mobile {
+    display: none;
+}
 .plans {
     display: flex;
     margin-top: 25px;
@@ -41,8 +46,9 @@
     margin-left: 50px;
 }
 
-.content-princing-plans {
+.content-pricing-plans {
     margin-top: 10px;
+    font-size: medium;
 }
 .subscription{
     font-weight: bold;
@@ -76,7 +82,97 @@
     border-radius: 20px;
     background: #fff;
     color: #007FFF;
-    margin: 40px 40px 30px;
+    margin: 30px 40px 30px;
     text-align: center;
     text-transform: uppercase;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .pricing-plans {
+        background:#f6F6F7F9;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .pricing-plans h2 {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .pricing-plans .pricing-plans-desktop {
+        display: none;
+    }
+    
+    .pricing-plans .pricing-plans-mobile {
+        display: block;
+        margin-top: 10px;
+        text-align: center; 
+        font-size: x-large;
+    }
+
+    .plans {
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+        margin-bottom: 60px;
+        justify-self: center;
+        align-items: center;    
+    }
+
+    
+.plan {
+    background: linear-gradient(179deg, rgb(107, 232, 231) 0%, rgb(0, 173, 229) 40%, rgb(0, 127, 238) 80%, rgb(0, 104, 241) 100%);
+    padding: 10px 24px;
+    border-radius: 10px;
+    height: 350px;
+    width: 250px;
+    margin: 25px;
+    color: #fff;
+}
+
+.plan img {
+    margin-left: 50px;
+}
+
+.content-pricing-plans {
+    margin-top: 10px;
+}
+.subscription{
+    font-weight: bold;
+}
+.subscription,
+.price {
+    text-align: center;
+}
+.price {
+    margin-top: 10px;
+}
+.description {
+    padding-top: 20px;
+    margin-top: 5px;
+}
+.price strong {
+    font-size: x-large;
+}
+
+.plan img {
+    width: 100px;
+}
+
+.plan a {
+    display: inline-block;
+    text-decoration: double;
+    font-weight:bolder;
+    font-size: 10px;
+    line-height: 1.5;
+    padding: 10px 24px;
+    border-radius: 20px;
+    background: #fff;
+    color: #007FFF;
+    margin: 40px 60px 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
 }
