@@ -4,6 +4,7 @@
 }
 
 .services{
+    font-family: 'Poppins', sans-serif;
     background-color: #f6F6F7F9;
     display: flex;
     flex-direction: column;
@@ -20,6 +21,11 @@
 .h2-section-01{
     margin-bottom: 20px;
 }
+
+.paragraph-mobile{
+    display: none;
+}
+
 .three-services-elements{
     width: 80vw;
     display: grid;
@@ -60,4 +66,24 @@
     text-decoration: none;
 }
 
+@media screen and (max-width:600px) {
+    .three-services-elements{
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        width: 100vw;
+        gap: 44px;
+    }
 
+    .paragraph-descktop{
+        display: none;
+    }
+
+    .paragraph-mobile{
+        display: block;
+        text-align: center;
+        width: 90 vw;
+        padding: 20px;
+    }
+}
